@@ -1,0 +1,17 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #131a22;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  color: #00baf2;
+  text-decoration: none;
+  margin: 0 10px;
+}

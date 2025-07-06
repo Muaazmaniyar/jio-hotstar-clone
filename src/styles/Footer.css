@@ -1,0 +1,8 @@
+.main-footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #131a22;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
