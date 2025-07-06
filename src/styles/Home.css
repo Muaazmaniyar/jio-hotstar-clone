@@ -83,3 +83,34 @@
     height: 180px;
   }
 }
+
+.trending-section {
+  padding: 40px 20px;
+  background-color: #0c111b;
+  color: white;
+}
+
+.trending-card {
+  padding: 10px;
+  text-align: center;
+}
+
+.trending-card img {
+  width: 250px;
+  height: 100%;              
+  object-fit: cover;          
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  background-size: cover;
+}
+
+.trending-card img:hover {
+  transform: scale(1.05);     
+}
+
+.trending-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}

@@ -1,6 +1,10 @@
 import React from 'react';
 import Header from '../components/Header';
 import '../styles/Home.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 
 const movies = [
   {
@@ -44,8 +48,43 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <section className="trending-section">
+        <h2>🔥 Trending Now</h2>
+        <Slider {...sliderSettings}>
+          {trending.map((movie, index) => (
+            <div key={index} className="trending-card">
+              <img src={movie.image} alt={movie.title} />
+              <p>{movie.title}</p>
+            </div>
+          ))}
+        </Slider>
+      </section>
     </div>
   );
+};
+
+const trending = [
+  { title: 'Extraction 2', image: require('../assets/extraction.webp') },
+  { title: 'Bhool Bhulaiyaa 2', image: require('../assets/bhoolbhulaiyya2.webp') },
+  { title: 'Iron Man', image: require('../assets/iron.webp') },
+  { title: 'Family Man', image: require('../assets/familyman.webp') },
+];
+
+const sliderSettings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
 };
 
 export default Home;
