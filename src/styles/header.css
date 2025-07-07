@@ -1,17 +1,35 @@
 .main-header {
+  position: fixed;         
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0c111b;  
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #131a22;
+  justify-content: space-between;
+  padding: 20px 40px;
+  z-index: 1000;          
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
-  height: 50px;
+  height: 40px;
 }
 
 nav a {
-  color: #00baf2;
-  text-decoration: none;
   margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00baf2;
+}
+
+.user-email {
+  margin-left: 15px;
+  font-size: 0.9rem;
+  color: #bbb;
+  font-weight: 500;
 }

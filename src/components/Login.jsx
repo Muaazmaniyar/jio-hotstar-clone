@@ -8,7 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false); // 🔄 Loading state
+  const [loading, setLoading] = useState(false); 
   const navigate = useNavigate();
 
   const handleLogin = async () => {
@@ -17,16 +17,16 @@ const Login = () => {
       return;
     }
 
-    setLoading(true); // Start loading
-    setError('');     // Clear error
+    setLoading(true); 
+    setError('');     
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate('/'); // ✅ Redirect on success
+      navigate('/'); 
     } catch (err) {
-      setError('Login failed: ' + err.message); // ❌ Show error
+      setError('Login failed: ' + err.message); 
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
 

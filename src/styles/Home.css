@@ -12,6 +12,7 @@
   padding: 30px;
   border-radius: 12px;
   max-width: 500px;
+  margin-top: 40px;
 }
 
 .banner-content h1 {
@@ -114,3 +115,4 @@
   font-weight: bold;
   font-size: 1rem;
 }
+
